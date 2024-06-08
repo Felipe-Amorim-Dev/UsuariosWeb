@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <div class="perfil" *ngIf="isAuthenticated">
+                <h1 class="mb-4">Perfil do Usuário</h1>
+                <img class="img-perfil col-4" [src]="fotoPerfilUsuario" alt="Foto de Perfil" *ngIf="fotoPerfilUsuario">
+                <div class="dados-1">
+                    <p class="campo">Nome: {{ nomeUsuario }}</p>
+                    <p class="campo">Sobrenome: {{ sobrenomeUsuario }}</p>
+                    <p class="campo">Email: {{ emailUsuario }}</p>
+                    <p class="campo">Data de Nascimento: {{ dataNascimentoUsuario }}</p>
+                    <p class="campo">Sexo: {{ sexoUsuario }}</p>
+                    <p class="campo">Endereço: {{ enderecoUsuario }}</p>
+                    <p class="campo">Telefone: {{ telefoneUsuario }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

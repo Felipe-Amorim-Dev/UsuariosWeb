@@ -1,0 +1,57 @@
+<div class="m-3">
+    <h5>Login</h5>
+    <p>Informe seu email e senha para acessar o sistema.</p>
+    <hr />
+  
+    <div class="mb-2 text-danger">
+      <strong>{{ mensagem_erro }}</strong>
+    </div>
+  
+    <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+      <div class="row mb-2">
+        <div class="col-md-4">
+          <label>Email de acesso:</label>
+          <input type="text" class="form-control" formControlName="email" />
+          <div
+            *ngIf="form.email.touched && form.email.invalid"
+            class="text-danger"
+          >
+            <div *ngIf="form.email.errors.required">
+              Por favor, informe o email do usuário.
+            </div>
+            <div *ngIf="form.email.errors.email">
+              Por favor, informe um endereço de email válido.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label>Senha de acesso:</label>
+          <input type="password" class="form-control" formControlName="senha" />
+          <div
+            *ngIf="form.senha.touched && form.senha.invalid"
+            class="text-danger"
+          >
+            <div *ngIf="form.senha.errors.required">
+              Por favor, informe a senha do usuário.
+            </div>
+            <div *ngIf="form.senha.errors.pattern">
+              Por favor, informe uma senha com letras maiúsculas, minúsculas,
+              números, símbolos e pelo menos 8 caracteres.
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row mb-2">
+        <div class="col">
+          <input
+            type="submit"
+            class="btn btn-primary"
+            value="Acessar Sistema"
+            [disabled]="!formLogin.valid"
+          />
+        </div>
+      </div>
+    </form>
+  </div>
+  

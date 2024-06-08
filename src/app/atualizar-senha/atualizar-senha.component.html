@@ -1,0 +1,36 @@
+<div class="m-3">
+    <h5>Atualização de senha</h5>
+    <p>Informe o email e a senha nova.</p>
+    <hr />
+  
+    <div class="mb-2 text-success">
+      <strong>{{ mensagem_sucesso }}</strong>
+    </div>
+  
+    <div class="mb-2 text-danger">
+      <strong>{{ mensagem_erro }}</strong>
+    </div>
+  
+    <form [formGroup]="formAlterarSenha" (ngSubmit)="onSubmit()">
+  
+      <div class="row mb-2">
+        <div class="col-md-4">
+          <label for="nome">Email:</label>
+          <input id="nome" class="form-control" type="text" formControlName="email">                            
+        </div>
+        <div class="col-md-4">
+          <label for="sobrenome">Nova senha:</label>
+          <input id="sobrenome" class="form-control" type="text" formControlName="senha">                            
+        </div>              
+        <div class="col-md-4">
+            <label for="nome">Confirme a nova senha:</label>
+            <input id="nome" class="form-control" type="text" formControlName="senhaConfirmacao">                            
+        </div> 
+        <div class="row mb-2 mt-2">
+            <div class="col">
+            <input type="submit" class="btn btn-primary" value="Salvar Alterações"/>
+        </div>
+        </div>
+      </div>
+    </form>
+  </div>

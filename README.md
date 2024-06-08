@@ -1,27 +1,43 @@
-# UsuariosWeb
+<h1>Front-End do gerenciamento Financeiro</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.6.
+<img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white"> ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white) ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
-## Development server
+![image](https://img.shields.io/badge/Feito_em-Angular-ffbc00)
+![image](https://img.shields.io/badge/Version-16-ffbc00)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<p>Essse é o Front-End em Angular para gerenciamento Financeiro. A pagina permite realizar operações de cadastramento, edição, exclusão e consulta de produtos.</p>
+<h3><a href="https://github.com/Felipe-Amorim-Dev/ContasApp">Link do Back-End</a></h3>
 
-## Code scaffolding
+<h2>Estrutura do Projeto</h2>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<p>O projeto está dividido em componentes:</p>
 
-## Build
+<h3>Componente NavBar</h3>
+<p>Barra de navegação comum entre todas as páginas.</p>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+<h3>Componente Footer</h3>
+<p>Roda-pé da página, componemte comum a todas as páginas.</p>
 
-## Running unit tests
+<h3>Componente Cadastrar-conta</h3>
+<p>Página para cadastro das contas.</p>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<h3>Componente Editar-conta</h3>
+<p>Página para edição de conta.</p>
 
-## Running end-to-end tests
+<h3>Componente Consultar-conta</h3>
+<p>Página para consulta de contas.</p>
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+<h3>Componente Remover-conta</h3>
+<p>Página para exclusão de conta.</p>
 
-## Further help
+<h2>Como Executar o Projeto</h2>
+<p>Para executar o projeto, você deve ter o Node, GitBash e o Angular v-16 devidamente instalado.</p>
+<p>Deve trocar-se o caminho da API no Environment, e apontar para o caminho do Back-End.</p>
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<h2>Contribuição</h2>
+
+Contribuições são sempre bem-vindas! Se você encontrou algum problema ou tem alguma sugestão para melhorar este projeto, por favor, abra uma issue ou envie um pull request.
+
+<h3>Licença</h3>
+
+<p>Este projeto é livre(FREE).</p>

@@ -1,0 +1,79 @@
+<div class="col-6 m-3">
+    <h2>Cadastro de Usuario</h2>
+    <p>Preencha o formulário para se cadastrar no sistema!</p>
+    <hr/>
+
+    <div class="mb-2 text-success">
+        <strong>{{mensagem_Sucesso}}</strong>
+    </div>
+
+    <form (ngSubmit)="onSubmit()" #imageForm="ngForm" >
+        
+        <div class="row mb-2">
+            <div class="col-6 mb-3">
+                <label>Nome</label>
+                <input class="form-control" type="text" name="nome" [(ngModel)]="model.nome" required>                            
+            </div>
+
+            <div class="col-6 mb-3">
+                <label>Sobrenome</label>
+                <input class="form-control" type="text" name="sobrenome" [(ngModel)]="model.sobrenome" required>                    
+            </div>
+
+            <div class="col-12 mb-3">
+                <label>Email</label>
+                <input class="form-control" type="email" name="email" [(ngModel)]="model.email" required>                                 
+            </div>
+
+            <div class="col-6 mb-3">
+                <label>Senha</label>
+                <input class="form-control" type="password" name="senha" [(ngModel)]="model.senha" required>                                  
+            </div>
+
+            <div class="col-6 mb-3">
+                <label>Confirme sua senha</label>
+                <input class="form-control" type="password" name="senhaConfirmacao" [(ngModel)]="model.senhaConfirmacao" required>                            
+            </div>
+
+            <div class="col-6 mb-3">
+                <label>Data de nascimento</label>
+                <input class="form-control" type="date" name="dataNascimento" [(ngModel)]="model.dataNascimento" required>                                   
+            </div>
+
+            <div class="col-6 mb-3">
+                <label>Gênero</label>
+                <select name="sexo" [(ngModel)]="model.sexo" class="form-select">
+                    <option *ngFor="let genero of (generoEnum | keyvalue)" [value]="genero.value">
+                      {{ genero.key }}
+                    </option>
+                </select>                           
+            </div>
+
+            <div class="col-6 mb-3">
+                <label>Endereço</label>
+                <input class="form-control" type="text" name="endereco" [(ngModel)]="model.endereco" required>                         
+            </div>
+
+            <div class="col-6 mb-3">
+                <label>Contato</label>
+                <input class="form-control" type="text" name="telefone" [(ngModel)]="model.telefone" required>                                
+            </div>
+
+            <div class="col-12 mb-3">
+                <label for="foto">Foto:</label>
+                <input class="form-control" type="file" (change)="onFileSelected($event)" accept="image/*">
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col">
+                <input type="submit" class="btn btn-success" value="Cadastrar">
+                    &nbsp;
+                    <a routerLink="/consultar-conta" class="btn btn-light">Login</a>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "ball-clip-rotate" [fullScreen] = "true"><p style="color: white" > Carregando... </p></ngx-spinner>

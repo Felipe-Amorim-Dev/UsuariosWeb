@@ -1,0 +1,53 @@
+<div class="m-3">
+  <h5>Atualização de dados Usuário</h5>
+  <p>Preencha os campos para atualizar seus dados.</p>
+  <hr />
+
+  <div class="mb-2 text-success">
+    <strong>{{ mensagem_sucesso }}</strong>
+  </div>
+
+  <div class="mb-2 text-danger">
+    <strong>{{ mensagem_erro }}</strong>
+  </div>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <div class="row mb-2">
+      <div class="col-md-4">
+        <label for="nome">Nome:</label>
+        <input id="nome" class="form-control" type="text" formControlName="nome">                            
+      </div>
+      <div class="col-md-4">
+        <label for="sobrenome">Sobrenome:</label>
+        <input id="sobrenome" class="form-control" type="text" formControlName="sobrenome">                            
+      </div>     
+      <div class="col-md-4">
+        <label for="sexo">Gênero</label>
+        <select id="sexo" class="form-select" formControlName="sexo">
+          <option *ngFor="let genero of (generoEnum | keyvalue)" [value]="genero.value">
+            {{ genero.key }}
+          </option>
+        </select>                               
+      </div>         
+      <div class="col-md-4">
+        <label for="endereco">Endereço:</label>
+        <input id="endereco" class="form-control" type="text" formControlName="endereco">                            
+      </div>          
+      <div class="col-md-4">
+        <label for="telefone">Telefone:</label>
+        <input id="telefone" class="form-control" type="text" formControlName="telefone">                            
+      </div>          
+      <div class="col-12 mb-3">
+        <label for="foto">Foto:</label>
+        <input id="foto" class="form-control" type="file" (change)="onFileSelected($event)" accept="image/*">
+      </div>
+    </div>
+
+    <div class="row mb-2">
+      <div class="col">
+        <input type="submit" class="btn btn-primary" value="Salvar Alterações"/>
+      </div>
+    </div>
+  </form>
+</div>
